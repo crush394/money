@@ -1,4 +1,3 @@
-
 <template>
   <nav>
     <router-link to="/money" class="item" active-class="selected">
