@@ -15,7 +15,6 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
 import {Component} from 'vue-property-decorator';
 import Button from '@/components/Button.vue';
 import {mixins} from 'vue-class-component';
@@ -28,14 +27,11 @@ export default class Labels extends mixins(TagHelper) {
   get tags(){
     return this.$store.state.tagList;
   }
-  beforeCreate(){
-    this.$store.commit('fetchTags');
-  }
 }
 </script>
 
 <style lang="scss" scoped>
-. {
+.tags {
   background: white;
   font-size: 16px;
   padding-left: 16px;
