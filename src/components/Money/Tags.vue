@@ -6,7 +6,7 @@
     <ul class="current">
       <li v-for="tag in tagList" :key="tag.id"
           :class="{selected:selectedTags.indexOf(tag)>=0}"
-          @click="toggle(tag)">{{tag.name}}
+          @click="toggle(tag)">{{ tag.name }}
       </li>
     </ul>
   </div>
@@ -22,11 +22,12 @@ import TagHelper from '@/mixins/TagHelper';
 export default class Tags extends mixins(TagHelper) {
   selectedTags: string[] = [];
 
-  get tagList(){
+  get tagList() {
     return this.$store.state.tagList;
   }
-  created(){
-    this.$store.commit('fetchTags')
+
+  created() {
+    this.$store.commit('fetchTags');
   }
 
   toggle(tag: string) {
