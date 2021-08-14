@@ -21,6 +21,8 @@ import Tags from '@/components/Money/Tags.vue';
 import {Component} from 'vue-property-decorator';
 import Tabs from '@/components/Tabs.vue';
 import recordTypeList from '@/constants/recordTypeList';
+import dayjs  from 'dayjs';
+
 @Component({
   components: {Tabs, Tags, FormItem, NumberPad},
 })
@@ -45,7 +47,7 @@ export default class Money extends Vue {
 </script>
 
 <style lang="scss" scoped>
-.layout-content {
+ ::v-deep .layout-content {
   display: flex;
   flex-direction: column-reverse;
 }
